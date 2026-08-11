@@ -76,6 +76,8 @@ Sections:
 
 Dark mode toggle
 
+Enhance the readability and interactivity
+
 Cloud sync (Firebase / Supabase)
 
 Advanced AI integrations (multi-model support)
