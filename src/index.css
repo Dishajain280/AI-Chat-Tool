@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+/* ── Theme-aware CSS classes used by MarkdownRenderer ─────────────────────── */
+
+/* Dark theme (default) */
+html.dark .theme-heading      { color: #ffffff; }
+html.dark .theme-subheading   { color: #f4f4f5; }
+html.dark .theme-text         { color: #e4e4e7; }
+html.dark .theme-muted        { color: #a1a1aa; }
+html.dark .theme-border       { border-color: #52525b; }
+html.dark .theme-divider      { border-color: #3f3f46; }
+html.dark .theme-divider-solid{ border-color: #3f3f46; }
+html.dark .theme-table-head   { background-color: #3f3f46; color: #ffffff; }
+
+/* Light theme */
+html.light .theme-heading     { color: #1e293b; }
+html.light .theme-subheading  { color: #334155; }
+html.light .theme-text        { color: #475569; }
+html.light .theme-muted       { color: #94a3b8; }
+html.light .theme-border      { border-color: #e2e8f0; }
+html.light .theme-divider     { border-color: #e2e8f0; }
+html.light .theme-divider-solid{border-color: #e2e8f0; }
+html.light .theme-table-head  { background-color: #f1f5f9; color: #1e293b; }
+
+/* Smooth theme transition on the whole page */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+/* Scrollbar styling — dark */
+html.dark ::-webkit-scrollbar       { width: 6px; }
+html.dark ::-webkit-scrollbar-track { background: #18181b; }
+html.dark ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: #52525b; }
+
+/* Scrollbar styling — light */
+html.light ::-webkit-scrollbar       { width: 6px; }
+html.light ::-webkit-scrollbar-track { background: #f8fafc; }
+html.light ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+html.light ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
